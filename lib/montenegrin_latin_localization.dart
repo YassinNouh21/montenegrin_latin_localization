@@ -2,4 +2,5 @@
 library;
 
 export 'src/montenegrin_latin_cupertino_localization_delegate.dart';
+export 'src/montenegrin_latin_material_localization_delegate.dart';
 export 'src/montenegrin_latin_widget_localization_delegate.dart';
