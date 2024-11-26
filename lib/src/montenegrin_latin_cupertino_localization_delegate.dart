@@ -61,7 +61,7 @@ const montenegrinLocaleDatePatterns = {
 ///
 /// These symbols are configured for Montenegrin (Latin) to ensure accurate localization.
 const montenegrinDateSymbols = {
-  'NAME': 'me',
+  'NAME': 'cnr',
   'ERAS': ['p. n.e.', 'n.e.'],
   'ERANAMES': ['Prije nove ere', 'Nove ere'],
   'NARROWMONTHS': [
@@ -213,8 +213,8 @@ class MontenegrinLatinCupertinoLocalizationsDelegate
 
   @override
   bool isSupported(Locale locale) =>
-      locale.languageCode == 'me' &&
-      (locale.scriptCode == 'Latn' || locale.scriptCode == null);
+      locale.languageCode == 'cnr' &&
+      (locale.scriptCode == 'cnr' || locale.scriptCode == null);
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
@@ -256,7 +256,7 @@ class MontenegrinLatinCupertinoLocalizationsDelegate
 class MontenegrinLatinCupertinoLocalizations
     extends GlobalCupertinoLocalizations {
   const MontenegrinLatinCupertinoLocalizations({
-    super.localeName = 'me',
+    super.localeName = 'cnr',
     required super.fullYearFormat,
     required super.mediumDateFormat,
     required super.decimalFormat,
