@@ -13,10 +13,17 @@ dependencies:
     sdk: flutter
   flutter_localizations:
     sdk: flutter
-  intl: ^0.19.0
+  intl: ">=0.18.0 <0.20.0"
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   mocktail: ^1.0.4
   very_good_analysis: ^6.0.0
+
+topics:
+  - localization
+  - internationalization
+  - l10n
+  - i18n
+  - montenegrin
