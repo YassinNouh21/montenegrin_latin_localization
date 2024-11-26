@@ -1,4 +1,4 @@
-## 0.1.1
+# 0.1.1
 
 - Fix: Expanded intl package compatibility to support versions ">=0.18.0 <0.20.0"
 - Chore: Added package topics for better discoverability
