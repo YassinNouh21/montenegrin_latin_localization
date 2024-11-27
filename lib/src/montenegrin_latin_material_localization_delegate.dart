@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:intl/date_symbol_data_custom.dart' as date_symbol_data_custom;
+import 'package:intl/date_symbol_data_custom.dart'
+    as date_symbol_data_custom;
 import 'package:intl/date_symbols.dart' as intl;
 import 'package:intl/intl.dart' as intl;
 
@@ -262,7 +264,7 @@ class _CnrMaterialLocalizationsDelegate
   @override
   Future<MaterialLocalizations> load(Locale locale) async {
     final String localeName =
-    intl.Intl.canonicalizedLocale(locale.toString());
+        intl.Intl.canonicalizedLocale(locale.toString());
 
     // Initialize custom date formatting for Montenegrin Latin.
     date_symbol_data_custom.initializeDateFormattingCustom(
@@ -274,13 +276,15 @@ class _CnrMaterialLocalizationsDelegate
     return SynchronousFuture<MaterialLocalizations>(
       CnrMaterialLocalizations(
         localeName: localeName,
-        decimalFormat: intl.NumberFormat('#,##0.###', 'en_US'), // Adjust if Montenegrin-specific formats are available
+        decimalFormat: intl.NumberFormat('#,##0.###', 'en_US'),
+        // Adjust if Montenegrin-specific formats are available
         twoDigitZeroPaddedFormat: intl.NumberFormat('00', 'en_US'),
         fullYearFormat: intl.DateFormat('y', localeName),
         compactDateFormat: intl.DateFormat('yMd', localeName),
         shortDateFormat: intl.DateFormat('yMMMd', localeName),
         mediumDateFormat: intl.DateFormat('EEE, MMM d', localeName),
-        longDateFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
+        longDateFormat:
+            intl.DateFormat('EEEE, MMMM d, y', localeName),
         yearMonthFormat: intl.DateFormat('MMMM y', localeName),
         shortMonthDayFormat: intl.DateFormat('MMM d', localeName),
       ),
@@ -316,6 +320,7 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get alertDialogLabel => 'Upozorenje';
+
   // #enddocregion getters
 
   @override
@@ -390,8 +395,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String get pageRowsInfoTitleRaw => '';
 
   @override
-  String get pageRowsInfoTitleApproximateRaw =>
-      '';
+  String get pageRowsInfoTitleApproximateRaw => '';
+
   // #enddocregion raw
 
   @override
@@ -422,7 +427,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String? get remainingTextFieldCharacterCountMany => null;
 
   @override
-  String get remainingTextFieldCharacterCountOne => 'Preostao je 1 karakter';
+  String get remainingTextFieldCharacterCountOne =>
+      'Preostao je 1 karakter';
 
   @override
   String get remainingTextFieldCharacterCountOther =>
@@ -432,7 +438,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String? get remainingTextFieldCharacterCountTwo => null;
 
   @override
-  String get remainingTextFieldCharacterCountZero => 'Nema preostalih karaktera';
+  String get remainingTextFieldCharacterCountZero =>
+      'Nema preostalih karaktera';
 
   @override
   String get reorderItemDown => 'Pomjeri dolje';
@@ -495,7 +502,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String get tabLabelRaw => 'Tab od ';
 
   @override
-  TimeOfDayFormat get timeOfDayFormatRaw => TimeOfDayFormat.h_colon_mm_space_a;
+  TimeOfDayFormat get timeOfDayFormatRaw =>
+      TimeOfDayFormat.h_colon_mm_space_a;
 
   @override
   String get timePickerHourModeAnnouncement => 'Odaberi sate';
@@ -514,7 +522,7 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   int get firstDayOfWeekIndex => 1; // Monday
 
   static const LocalizationsDelegate<MaterialLocalizations> delegate =
-  _CnrMaterialLocalizationsDelegate();
+      _CnrMaterialLocalizationsDelegate();
 
   @override
   String get calendarModeButtonLabel => 'Prebaci na kalendar';
@@ -541,7 +549,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String get dateRangePickerHelpText => 'ODABERI RASPODELJENJE';
 
   @override
-  String get dateRangeStartDateSemanticLabelRaw => 'Početni datum \$fullDate';
+  String get dateRangeStartDateSemanticLabelRaw =>
+      'Početni datum \$fullDate';
 
   @override
   String get dateRangeStartLabel => 'Početni datum';
@@ -556,7 +565,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String get inputDateModeButtonLabel => 'Prebaci na unos';
 
   @override
-  String get inputTimeModeButtonLabel => 'Prebaci na tekstualni unos vremena';
+  String get inputTimeModeButtonLabel =>
+      'Prebaci na tekstualni unos vremena';
 
   @override
   String get invalidDateFormatLabel => 'Neispravan format.';
@@ -568,7 +578,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String get invalidTimeLabel => 'Unesite ispravno vrijeme';
 
   @override
-  String get licensesPackageDetailTextOther => '\$licenseCount licenci';
+  String get licensesPackageDetailTextOther =>
+      '\$licenseCount licenci';
 
   @override
   String get saveButtonLabel => 'SAČUVAJ';
@@ -757,7 +768,8 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
   String get expansionTileCollapsedHint => 'dupli tap za proširenje';
 
   @override
-  String get expansionTileCollapsedTapHint => 'Proširi za više detalja';
+  String get expansionTileCollapsedTapHint =>
+      'Proširi za više detalja';
 
   @override
   String get expansionTileExpandedHint => 'dupli tap za sažimanje';
@@ -785,4 +797,215 @@ class CnrMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get selectedDateLabel => 'Odabrano';
+}
+
+/// A custom set of Cupertino localizations for the `cnr` locale.
+
+/// A custom set of Cupertino localizations for the `cnr` locale.
+class CnrCupertinoLocalizations implements CupertinoLocalizations {
+  const CnrCupertinoLocalizations(this.locale);
+
+  final Locale locale;
+
+  static const List<String> _shortWeekdays = <String>[
+    'Ned',
+    'Pon',
+    'Uto',
+    'Sri',
+    'Čet',
+    'Pet',
+    'Sub',
+  ];
+
+  static const List<String> _fullWeekdays = <String>[
+    'Nedjelja',
+    'Ponedjeljak',
+    'Utorak',
+    'Srijeda',
+    'Četvrtak',
+    'Petak',
+    'Subota',
+  ];
+
+  static const List<String> _shortMonths = <String>[
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'Maj',
+    'Jun',
+    'Jul',
+    'Avg',
+    'Sep',
+    'Okt',
+    'Nov',
+    'Dec',
+  ];
+
+  static const List<String> _fullMonths = <String>[
+    'Januar',
+    'Februar',
+    'Mart',
+    'April',
+    'Maj',
+    'Juni',
+    'Juli',
+    'Avgust',
+    'Septembar',
+    'Oktobar',
+    'Novembar',
+    'Decembar',
+  ];
+
+  @override
+  String get alertDialogLabel => 'Upozorenje';
+
+  @override
+  String get anteMeridiemAbbreviation => 'prijepodne';
+
+  @override
+  String get postMeridiemAbbreviation => 'popodne';
+
+  @override
+  String get copyButtonLabel => 'Kopiraj';
+
+  @override
+  String get cutButtonLabel => 'Iseci';
+
+  @override
+  String get pasteButtonLabel => 'Zalijepi';
+
+  @override
+  String get selectAllButtonLabel => 'Odaberi sve';
+
+  @override
+  String get clearButtonLabel => 'Očisti';
+
+  @override
+  String get todayLabel => 'Danas';
+
+  @override
+  String get modalBarrierDismissLabel => 'Odbaci';
+
+  @override
+  DatePickerDateOrder get datePickerDateOrder =>
+      DatePickerDateOrder.dmy;
+
+  @override
+  DatePickerDateTimeOrder get datePickerDateTimeOrder =>
+      DatePickerDateTimeOrder.date_time_dayPeriod;
+
+  @override
+  String datePickerDayOfMonth(int dayIndex, [int? weekDay]) {
+    return '$dayIndex';
+  }
+
+  @override
+  String datePickerHour(int hour) {
+    return '$hour';
+  }
+
+  @override
+  String? datePickerHourSemanticsLabel(int hour) {
+    return '$hour sati';
+  }
+
+  @override
+  String datePickerMediumDate(DateTime date) {
+    final formatter =
+        intl.DateFormat('EEEE, d. MMMM y', locale.toString());
+    return formatter.format(date);
+  }
+
+  @override
+  String datePickerMinute(int minute) {
+    return minute.toString().padLeft(2, '0');
+  }
+
+  @override
+  String? datePickerMinuteSemanticsLabel(int minute) {
+    return '$minute minuta';
+  }
+
+  @override
+  String datePickerMonth(int monthIndex) {
+    return _shortMonths[monthIndex - 1];
+  }
+
+  @override
+  String datePickerStandaloneMonth(int monthIndex) {
+    return _fullMonths[monthIndex - 1];
+  }
+
+  @override
+  String datePickerYear(int yearIndex) {
+    return '$yearIndex';
+  }
+
+  @override
+  String get lookUpButtonLabel => 'Potraži';
+
+  @override
+  String get menuDismissLabel => 'Odbaci meni';
+
+  @override
+  String get searchTextFieldPlaceholderLabel => 'Pretraži';
+
+  @override
+  String get searchWebButtonLabel => 'Pretraži web';
+
+  @override
+  String get shareButtonLabel => 'Podijeli...';
+
+  @override
+  String tabSemanticsLabel(
+      {required int tabIndex, required int tabCount}) {
+    return 'Tab $tabIndex od $tabCount';
+  }
+
+  @override
+  String timerPickerHour(int hour) {
+    return '$hour';
+  }
+
+  @override
+  String? timerPickerHourLabel(int hour) {
+    return '$hour sati';
+  }
+
+  @override
+  List<String> get timerPickerHourLabels =>
+      _shortMonths; // Typically not months, adjust as needed.
+
+  @override
+  String timerPickerMinute(int minute) {
+    return minute.toString().padLeft(2, '0');
+  }
+
+  @override
+  String? timerPickerMinuteLabel(int minute) {
+    return '$minute minuta';
+  }
+
+  @override
+  List<String> get timerPickerMinuteLabels => List<String>.generate(
+      60, (index) => index.toString().padLeft(2, '0'));
+
+  @override
+  String timerPickerSecond(int second) {
+    return second.toString().padLeft(2, '0');
+  }
+
+  @override
+  String? timerPickerSecondLabel(int second) {
+    return '$second sekundi';
+  }
+
+  @override
+  List<String> get timerPickerSecondLabels => List<String>.generate(
+      60, (index) => index.toString().padLeft(2, '0'));
+
+  @override
+  String get noSpellCheckReplacementsLabel =>
+      'Nema zamjena za provjeru pravopisa';
 }
